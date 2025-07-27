@@ -167,3 +167,22 @@ The **File Chunking Console Application** follows **modern software design princ
 - **Integrity Checks**:
   - **SHA256 checksums** computed during **upload** and verified during **download**.
   - **Chunk size validation** prevents **corruption**.
+
+# **Extra Features**
+- **Multiple File Uploads**:
+  - Upload **multiple files** via **comma-separated paths** or a **directory path**.
+  - Each **file** is chunked (**1 MB chunks**) and stored with **metadata**.
+- **Auto-Migration**:
+  - Automatically applies **database migrations** at startup using MigrateAsync.
+  - Logs **migration status** to **Elasticsearch**.
+- **Elasticsearch Health Check**:
+  - Verifies **Elasticsearch availability** at startup, logging **warnings** if unavailable.
+- **Default File Name Suggestion**:
+  - Suggests **download paths** in c:\outputs based on original file names (e.g., c:\outputs\original.txt).
+  - Uses the **default** if no **path** is provided.
+- **Enhanced Logging**:
+  - **Detailed logs** for **chunk processing**, **provider selection**, and **hecksum failures**.
+  - **Path validation errors** logged for **debugging**.
+- **Input Validation**:
+  - Validates **file paths** and **permissions** for **uploads** and **downloads**.
+  - Prevents **directories** as **output paths** (e.g., c:\outputs).
