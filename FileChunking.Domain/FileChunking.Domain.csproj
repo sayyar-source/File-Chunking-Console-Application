@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interfaces\IFileChunkingService.cs" />
+    <Compile Remove="Interfaces\IFileReassemblyService.cs" />
+    <Compile Remove="Interfaces\IMetadataRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Entities\FileMetadata.cs" />
+  </ItemGroup>
+
+</Project>

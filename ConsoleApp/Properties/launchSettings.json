@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "FileChunking": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
